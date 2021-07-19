@@ -1,5 +1,7 @@
 #pragma once
 
+#include "vec3.h"
+
 enum object_type
 {
   SPHERE = 0,
@@ -21,7 +23,7 @@ class object
   private:
   protected:
     object();
-public:
+  public:
     virtual low_level_object gen_low_level_object(void);
 };
 

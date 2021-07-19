@@ -1,11 +1,6 @@
 #pragma once
 #include "object.h"
 
-struct vec3
-{
-  double x, y, z;
-};
-
 class object_sph : object 
 {
   private:
@@ -22,9 +17,9 @@ class object_sph : object
     {
       low_level_object tmp;
       tmp.type = SPHERE;
-      tmp.Arr[0] = Pos.x;
-      tmp.Arr[1] = Pos.y;
-      tmp.Arr[2] = Pos.z;
+      tmp.Arr[0] = Pos.getX();
+      tmp.Arr[1] = Pos.getY();
+      tmp.Arr[2] = Pos.getZ();
       tmp.Arr[3] = Radius;
     }
 };

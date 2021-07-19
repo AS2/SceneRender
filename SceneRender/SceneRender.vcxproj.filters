@@ -25,6 +25,9 @@
     <Filter Include="Source Files\object">
       <UniqueIdentifier>{3906835a-55a5-4983-937e-a9993557d1f4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\math">
+      <UniqueIdentifier>{28379cb6-5901-4b6d-b67d-a470f0d40a21}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -46,6 +49,12 @@
     </ClInclude>
     <ClInclude Include="object_sphere.h">
       <Filter>Source Files\object</Filter>
+    </ClInclude>
+    <ClInclude Include="matr3.h">
+      <Filter>Source Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="vec3.h">
+      <Filter>Source Files\math</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
