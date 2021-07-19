@@ -1,7 +1,7 @@
 #pragma once
 #include "object.h"
 
-class object_sph : object 
+class object_sph : public object 
 {
   private:
     vec3 Pos;
@@ -21,5 +21,6 @@ class object_sph : object
       tmp.Arr[1] = Pos.getY();
       tmp.Arr[2] = Pos.getZ();
       tmp.Arr[3] = Radius;
+      return tmp;
     }
 };

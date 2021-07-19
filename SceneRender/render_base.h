@@ -6,7 +6,7 @@ class render_base
 {
 protected:
   core *our_core;
-  render_base();
+  render_base(){}
 public:
   void SetCore(core *new_core)
   {

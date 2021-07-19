@@ -22,9 +22,9 @@ class object
 {
   private:
   protected:
-    object();
+    object() {}
   public:
-    virtual low_level_object gen_low_level_object(void);
+    virtual low_level_object gen_low_level_object(void) { return low_level_object();};
 };
 
 #include "object_sphere.h"

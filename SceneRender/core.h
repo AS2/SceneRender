@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 #include "render_base.h"
 #include "object.h"
 
@@ -17,6 +18,11 @@ class core
       current_renderer = renderer;
       renderer->SetCore(this);
       current_renderer->init();
+    }
+
+    void add(object *Obj) 
+    {
+      objects.push_back(Obj);
     }
 
     void run(void)
