@@ -1,7 +1,10 @@
 #pragma once
 #include <vector>
 #include "render_base.h"
+
 #include "object.h"
+#include "material.h"
+#include "light.h"
 
 class core
 {
@@ -12,6 +15,8 @@ class core
 
   public:
     std::vector<object *> objects;
+    std::vector<material> materials;
+    std::vector<light *> lights;
 
     core(render_base * renderer)
     {
@@ -20,9 +25,15 @@ class core
       current_renderer->init();
     }
 
-    void add(object *Obj) 
+    void addObj(object *Obj, material &newMater) 
     {
       objects.push_back(Obj);
+      materials.push_back(newMater);
+    }
+
+    void addLight(light *newLight)
+    {
+      lights.push_back(newLight);
     }
 
     void run(void)

@@ -28,12 +28,24 @@
     <Filter Include="Source Files\math">
       <UniqueIdentifier>{28379cb6-5901-4b6d-b67d-a470f0d40a21}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\materials">
+      <UniqueIdentifier>{69512ebb-3d7e-4365-8f45-cfe240630c7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lights">
+      <UniqueIdentifier>{d7798ea8-2d7a-4d26-b037-2fa56abc7c3f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ray_cast.cpp">
+      <Filter>Source Files\render_cpu_rt</Filter>
+    </ClCompile>
+    <ClCompile Include="ray_collisions.cpp">
+      <Filter>Source Files\render_cpu_rt</Filter>
+    </ClCompile>
+    <ClCompile Include="ray_normals.cpp">
       <Filter>Source Files\render_cpu_rt</Filter>
     </ClCompile>
   </ItemGroup>
@@ -58,6 +70,21 @@
     </ClInclude>
     <ClInclude Include="vec3.h">
       <Filter>Source Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="object_plane.h">
+      <Filter>Source Files\object</Filter>
+    </ClInclude>
+    <ClInclude Include="object_rectangle.h">
+      <Filter>Source Files\object</Filter>
+    </ClInclude>
+    <ClInclude Include="object_box.h">
+      <Filter>Source Files\object</Filter>
+    </ClInclude>
+    <ClInclude Include="material.h">
+      <Filter>Source Files\materials</Filter>
+    </ClInclude>
+    <ClInclude Include="light.h">
+      <Filter>Source Files\lights</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

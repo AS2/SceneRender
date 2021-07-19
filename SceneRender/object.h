@@ -28,3 +28,6 @@ class object
 };
 
 #include "object_sphere.h"
+#include "object_plane.h"
+#include "object_box.h"
+#include "object_rectangle.h"
