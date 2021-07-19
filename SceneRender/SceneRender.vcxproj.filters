@@ -13,5 +13,39 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\render_base">
+      <UniqueIdentifier>{16a6c9c5-713b-483a-a0da-2573de5d4009}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\render_cpu_rt">
+      <UniqueIdentifier>{83f82828-54b4-46da-b5c0-fc187901f498}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\core">
+      <UniqueIdentifier>{c72b7e6f-12c9-4b24-bc6f-f992589cabb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\object">
+      <UniqueIdentifier>{3906835a-55a5-4983-937e-a9993557d1f4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="render_base.h">
+      <Filter>Source Files\render_base</Filter>
+    </ClInclude>
+    <ClInclude Include="render_cpu_rt.h">
+      <Filter>Source Files\render_cpu_rt</Filter>
+    </ClInclude>
+    <ClInclude Include="core.h">
+      <Filter>Source Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="object.h">
+      <Filter>Source Files\object</Filter>
+    </ClInclude>
+    <ClInclude Include="object_sphere.h">
+      <Filter>Source Files\object</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

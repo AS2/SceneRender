@@ -115,6 +115,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="object.h" />
+    <ClInclude Include="object_sphere.h" />
+    <ClInclude Include="render_base.h" />
+    <ClInclude Include="render_cpu_rt.h" />
+    <ClInclude Include="core.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
