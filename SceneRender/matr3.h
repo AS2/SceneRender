@@ -13,17 +13,17 @@ public:
     values = std::vector<double>(9, 0);
   };
 
-  matr3(const std::vector<double>& newValues) {
+  matr3(  std::vector<double>& newValues) {
     values = std::vector<double>(newValues);
   };
 
-  double GetValue(const int& indW, const int& indH) const {
+  double GetValue(  int& indW,   int& indH)   {
     if (indW < 0 || indW >= 3 || indH < 0 || indH >= 3)
       return 0;
     return values[indH * 3 + indW];
   }
 
-  matr3 operator+(const matr3& mtr2) const {
+  matr3 operator+(  matr3& mtr2)   {
     std::vector<double> newValues(9);
 
     for (int i = 0; i < 9; i++)
@@ -32,7 +32,7 @@ public:
     return matr3(newValues);
   }
 
-  matr3 operator*(const matr3& mtr2) const {
+  matr3 operator*(  matr3& mtr2)   {
     std::vector<double> newValues(9, 0);
 
     for (int x = 0; x < 3; x++)
@@ -43,14 +43,14 @@ public:
     return matr3(newValues);
   }
 
-  vec3 operator*(const vec3& vec) const {
+  vec3 operator*(  vec3& vec)   {
     double x = vec.getX(), y = vec.getY(), z = vec.getZ();
     return vec3(values[0] * x + values[1] * y + values[2] * z,
       values[3] * x + values[4] * y + values[5] * z,
       values[6] * x + values[7] * y + values[8] * z);
   }
 
-  matr3& operator=(const matr3& mtr2) {
+  matr3& operator=(  matr3& mtr2) {
     if (this == &mtr2)
       return *this;
 
@@ -59,7 +59,7 @@ public:
   }
 };
 
-matr3 MatrRotateX(const double& alpha) {
+matr3 MatrRotateX(  double& alpha) {
   std::vector<double> newValues(9);
 
   newValues[0] = 1;
@@ -71,7 +71,7 @@ matr3 MatrRotateX(const double& alpha) {
   return matr3(newValues);
 }
 
-matr3 MatrRotateY(const double& beta) {
+matr3 MatrRotateY(  double& beta) {
   std::vector<double> newValues(9);
 
   newValues[4] = 1;
@@ -83,7 +83,7 @@ matr3 MatrRotateY(const double& beta) {
   return matr3(newValues);
 }
 
-matr3 MatrRotateZ(const double& gamma) {
+matr3 MatrRotateZ(  double& gamma) {
   std::vector<double> newValues(9);
 
   newValues[8] = 1;

@@ -15,4 +15,5 @@ public:
   
   virtual void init(void) {};
   virtual void draw(void) {};
+  virtual void term(void) {};
 };

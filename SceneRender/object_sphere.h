@@ -3,10 +3,10 @@
 
 class object_sph : public object 
 {
-  private:
+  public:
     vec3 Pos;
     double Radius;
-  public:
+
     object_sph(vec3 Pos, double Radius)
     {
       this->Pos = Pos;
