@@ -120,8 +120,8 @@ void render_gpu_rt::send_objects(void)
     GLuint uniform_buffer;
     glGenBuffers(1, &uniform_buffer);
     glBindBuffer(GL_UNIFORM_BUFFER, uniform_buffer);
-    glBufferData(GL_UNIFORM_BUFFER, sizeof(low_level_object) * MAX_OBJECTS_SIZE, ll_objs, GL_DYNAMIC_DRAW);
-    glBindBufferBase(GL_UNIFORM_BUFFER, uniform_ObjectsBlock, uniform_buffer);
+    glBufferData(GL_UNIFORM_BUFFER, sizeof(low_level_object) * MAX_OBJECTS_SIZE, ll_objs, GL_STATIC_DRAW);
+    glBindBufferRange(GL_UNIFORM_BUFFER, uniform_ObjectsBlock, uniform_buffer, 0, sizeof(low_level_object) * MAX_OBJECTS_SIZE);
     glBindBuffer(GL_UNIFORM_BUFFER, 0);
   }
   /*

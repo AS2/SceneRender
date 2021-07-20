@@ -14,8 +14,8 @@ enum object_type
 
 struct low_level_object
 {
-  object_type type;  // 4 byte
-  double Arr[16];    // 8 * 16
+  float Arr[15]= {0};    // 8 * 16
+  int type = NUM_OF_OBJECT_TYPES;  // 4 byte
 };
 
 class object
