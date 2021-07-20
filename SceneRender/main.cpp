@@ -27,11 +27,13 @@ int main(void)
   core scene = core(new render_gpu_rt(640, 320));
 
   // OBJS
-  scene.addObj(new object_sph(vec3(-6,0,0), 1), materials[0]);
+  scene.addObj(new object_sph(vec3(-6, 0, 0), 1), materials[0]);
   scene.addObj(new object_sph(vec3(-8, -1, 1.2), 0.9), materials[10]);
   scene.addObj(new object_sph(vec3(-9, 1, 1.2), 0.9), materials[6]);
   scene.addObj(new object_sph(vec3(-6, 1, -0.5), 0.6), materials[11]);
   scene.addObj(new object_sph(vec3(-3, -2, 1.4), 0.3), materials[12]);
+
+  scene.addObj(new object_box(vec3(-7, -3, -2.25), vec3(-6, -4, -2.25), vec3(-6, -2, -2.25), vec3(-7, -3, -0.8357)), materials[1]);
 
   // left wall
   scene.addObj(new object_plane(vec3(0, 1, 0).normal(), vec3(0, -10, 0)), materials[2]);
@@ -45,8 +47,6 @@ int main(void)
   scene.addObj(new object_plane(vec3(1, 0, 0).normal(), vec3(2, 0, 0)), materials[6]);
   // floor
   scene.addObj(new object_rectangle(vec3(2, -10, -2.25), vec3(2, 10, -2.25), vec3(-18, -10, -2.25)), materials[5]);
-
-  scene.addObj(new object_box(vec3(-7, -3, -2.25), vec3(-6, -4, -2.25), vec3(-6, -2, -2.25), vec3(-7, -3, -0.8357)), materials[1]);
 
   // LIGHTS
   scene.addLight(new light(vec3(-3, -4, 3), vec3(1, 1, 1)));

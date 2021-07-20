@@ -124,21 +124,23 @@ void render_gpu_rt::send_objects(void)
     glBindBufferRange(GL_UNIFORM_BUFFER, uniform_ObjectsBlock, uniform_buffer, 0, sizeof(low_level_object) * MAX_OBJECTS_SIZE);
     glBindBuffer(GL_UNIFORM_BUFFER, 0);
   }
-  /*
 
-  for (int i = 0; i < our_core->objects.size(); i++)
   {
-    low_level_object ll_objs[i] = our_core->objects[i]->gen_low_level_object();
-    std::string pref = "Object[" + std::to_string(i) + "].";
-    
-    std::string type = pref + "type";
-    int uniform_Objects_type = glGetUniformLocation(shaderProgramId, type.c_str());
-    glUniform1i(uniform_Objects_type, ll_obj.type);
+    low_level_material ll_maters[MAX_OBJECTS_SIZE];
+  
+    for (int i = 0; i < our_core->materials.size(); i++)
+      ll_maters[i] = our_core->materials[i].gen_low_level_material();
 
-    std::string arr = pref + "arr";
-    int uniform_Objects_arr = glGetUniformLocation(shaderProgramId, arr.c_str());
-    glUniform1dv(uniform_Objects_type, 16, ll_obj.Arr);
-  }*/
+    int uniform_MaterialsBlock = glGetUniformBlockIndex(shaderProgramId, "Materials_Block");
+    glUniformBlockBinding(shaderProgramId, uniform_MaterialsBlock, 0);
+    // Uniform buffer object for lights
+    GLuint uniform_buffer;
+    glGenBuffers(1, &uniform_buffer);
+    glBindBuffer(GL_UNIFORM_BUFFER, uniform_buffer);
+    glBufferData(GL_UNIFORM_BUFFER, sizeof(low_level_material) * MAX_OBJECTS_SIZE, ll_maters, GL_STATIC_DRAW);
+    glBindBufferRange(GL_UNIFORM_BUFFER, uniform_MaterialsBlock, uniform_buffer, 0, sizeof(low_level_material) * MAX_OBJECTS_SIZE);
+    glBindBuffer(GL_UNIFORM_BUFFER, 0);
+  }
 }
 
 void display(void)
