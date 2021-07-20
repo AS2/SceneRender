@@ -5,7 +5,7 @@
 enum object_type
 {
   SPHERE = 0,
-  RECT,
+  RECTANGLE,
   PLANE,
   BOX,
   TRIANGLE,

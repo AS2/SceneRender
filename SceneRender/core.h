@@ -6,6 +6,8 @@
 #include "material.h"
 #include "light.h"
 
+#define MAX_OBJECTS_SIZE 100
+
 class core
 {
   private:

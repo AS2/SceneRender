@@ -1,5 +1,6 @@
 #include "core.h"
 #include "render_cpu_rt.h"
+#include "render_gpu_rt.h"
 
 // TODO
 // - add lights
@@ -23,7 +24,7 @@ material materials[] = {
 
 int main(void)
 {
-  core scene = core(new render_cpu_rt(640, 320));
+  core scene = core(new render_gpu_rt(640, 320));
 
   // OBJS
   scene.addObj(new object_sph(vec3(-6,0,0), 1), materials[0]);

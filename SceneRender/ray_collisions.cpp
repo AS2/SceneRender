@@ -13,7 +13,7 @@ int render_cpu_rt::ray_cast_obj(object* obj, ray& ray, vec3& pos)
     return ray_cast_sphere(dynamic_cast<object_sph*>(obj), ray, pos);
   case PLANE:
     return ray_cast_plane(dynamic_cast<object_plane*>(obj), ray, pos);
-  case RECT:
+  case RECTANGLE:
     return ray_cast_rectangle(dynamic_cast<object_rectangle*>(obj), ray, pos);
   case BOX:
     return ray_cast_box(dynamic_cast<object_box*>(obj), ray, pos);

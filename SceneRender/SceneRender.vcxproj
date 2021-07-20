@@ -22,19 +22,19 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{B262DA80-DC62-4988-9BD4-302D943D6E85}</ProjectGuid>
     <RootNamespace>SceneRender</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -77,6 +77,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
+    <Link />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -118,12 +119,14 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ray_collisions.cpp" />
     <ClCompile Include="ray_normals.cpp" />
+    <ClCompile Include="render_gpu_rt.cpp" />
     <ClInclude Include="light.h" />
     <ClInclude Include="material.h" />
     <ClInclude Include="object_box.h" />
     <ClInclude Include="object_plane.h" />
     <ClCompile Include="ray_cast.cpp" />
     <ClInclude Include="object_rectangle.h" />
+    <ClInclude Include="render_gpu_rt.h" />
     <ClInclude Include="vec3.h" />
   </ItemGroup>
   <ItemGroup>
@@ -135,7 +138,13 @@
     <ClInclude Include="core.h" />
   </ItemGroup>
   <ItemGroup>
+    <Library Include="lib\glut\lib\freeglut.lib" />
+    <Library Include="lib\glut\lib\glew32s.lib" />
     <Library Include="lib\labengine\labengine-vs15-dbg.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="render_gpu_rt.frag" />
+    <None Include="render_gpu_rt.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

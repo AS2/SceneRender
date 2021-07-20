@@ -3,6 +3,7 @@
 #include "render_base.h"
 #include "vec3.h"
 #include <vector>
+#include <algorithm>
 
 #define RAY_INF 1000
 #define RAY_SHIFT 0.001

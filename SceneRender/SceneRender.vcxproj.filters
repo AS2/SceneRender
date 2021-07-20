@@ -34,6 +34,12 @@
     <Filter Include="Source Files\lights">
       <UniqueIdentifier>{d7798ea8-2d7a-4d26-b037-2fa56abc7c3f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\render_gpu_rt">
+      <UniqueIdentifier>{8760b80c-c030-4ebf-825c-1147b91ac2a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\render_gpu_rt\shader">
+      <UniqueIdentifier>{4e7bb9aa-cbba-45ff-be78-1798910dee0e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -47,6 +53,9 @@
     </ClCompile>
     <ClCompile Include="ray_normals.cpp">
       <Filter>Source Files\render_cpu_rt</Filter>
+    </ClCompile>
+    <ClCompile Include="render_gpu_rt.cpp">
+      <Filter>Source Files\render_gpu_rt</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -86,10 +95,27 @@
     <ClInclude Include="light.h">
       <Filter>Source Files\lights</Filter>
     </ClInclude>
+    <ClInclude Include="render_gpu_rt.h">
+      <Filter>Source Files\render_gpu_rt</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="lib\labengine\labengine-vs15-dbg.lib">
       <Filter>Resource Files</Filter>
     </Library>
+    <Library Include="lib\glut\lib\freeglut.lib">
+      <Filter>Resource Files</Filter>
+    </Library>
+    <Library Include="lib\glut\lib\glew32s.lib">
+      <Filter>Resource Files</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="render_gpu_rt.frag">
+      <Filter>Source Files\render_gpu_rt\shader</Filter>
+    </None>
+    <None Include="render_gpu_rt.vert">
+      <Filter>Source Files\render_gpu_rt\shader</Filter>
+    </None>
   </ItemGroup>
 </Project>

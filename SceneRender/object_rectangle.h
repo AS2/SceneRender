@@ -27,7 +27,7 @@ public:
   virtual low_level_object gen_low_level_object(void)
   {
     low_level_object tmp;
-    tmp.type = RECT;
+    tmp.type = RECTANGLE;
 
     tmp.Arr[0]  = LDcorn.getX();
     tmp.Arr[1]  = LDcorn.getY();

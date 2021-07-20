@@ -13,7 +13,7 @@ vec3 render_cpu_rt::ray_norm_obj(object* obj, ray& ray, vec3& pos)
     return ray_norm_sphere(dynamic_cast<object_sph*>(obj), ray, pos);
   case PLANE:
     return ray_norm_plane(dynamic_cast<object_plane*>(obj), ray, pos);
-  case RECT:
+  case RECTANGLE:
     return ray_norm_rectangle(dynamic_cast<object_rectangle*>(obj), ray, pos);
   case BOX:
     return ray_norm_box(dynamic_cast<object_box*>(obj), ray, pos);
